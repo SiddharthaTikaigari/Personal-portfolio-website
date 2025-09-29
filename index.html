@@ -1,0 +1,279 @@
+<!-- Header brand with symbol and TS label -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="entry-overlay" aria-label="Intro screen" role="dialog" aria-modal="true">
+      <canvas id="orbits"></canvas>
+      <div class="overlay-content">
+        <h1 class="headline">Imagination > Reality</h1>
+        <p class="sub">No detours needed — the magic happens right here.</p>
+        <button id="enter-btn" class="enter">Click anywhere to step inside</button>
+        <div class="scroll-hint" aria-hidden="true">⌄</div>
+      </div>
+    </div>
+
+    <main id="site" hidden>
+      <header class="nav">
+        <div class="brand">
+          <svg class="brand-symbol" viewBox="0 0 24 24" aria-hidden="true">
+            <defs>
+              <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4de1ff"/>
+                <stop offset="100%" stop-color="#a259ff"/>
+              </linearGradient>
+            </defs>
+            <path d="M12 3 L16.5 8 L12 13 L7.5 8 Z" fill="none" stroke="url(#g1)" stroke-width="1.6"/>
+            <circle cx="12" cy="8" r="6.6" fill="none" stroke="rgba(160,220,255,0.35)" stroke-width="1"/>
+          </svg>
+          <span class="brand-name">TS</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#academic">Academic</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+          <a href="#resume" class="btn small ghost">Resume</a>
+        </nav>
+      </header>
+
+      <section class="hero container" id="home">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1 class="name-gradient name-zoom">Siddhartha Tikaigari</h1>
+        <div class="avatar-ring">
+          <img src="public/avatar.jpg" alt="Siddhartha Tikaigari" loading="eager" decoding="async" onerror="this.src='https://avatars.githubusercontent.com/u/9919?s=200&v=4'" />
+        </div>
+        <h2 class="tagline">Blockchain Enthusiast • Full‑Stack Developer</h2>
+        <div class="quote glass">
+          <p>"Knowledge becomes impact when it is built, tested, and shared."</p>
+        </div>
+        <div class="cta-row">
+          <a class="btn" href="#resume">Download Resume</a>
+          <a class="btn ghost" href="#projects">View Projects</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/siddhartha-tikaigari/" target="_blank" rel="noopener" aria-label="LinkedIn" class="icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
+              <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5.001 2.5 2.5 0 0 1 0-5.001zM3 9h4v12H3zM14.5 9c-2.21 0-3.5 1.205-3.5 3.074V21h4v-6.35c0-1.022.72-1.8 1.76-1.8 1.03 0 1.74.696 1.74 1.786V21h4v-6.93C22.5 10.76 20.64 9 18.07 9c-1.24 0-2.35.53-3.07 1.41V9h-1.5z"/>
+            </svg>
+          </a>
+          <a href="mailto:siddharthatikaigari@gmail.com" aria-label="Email" class="icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M22 7L12 13 2 7"></path>
+            </svg>
+          </a>
+          <a href="https://github.com/SiddharthaTikaigari" target="_blank" rel="noopener" aria-label="GitHub" class="icon">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.4.6.1.8-.3.8-.6v-2.2c-3.34.7-4.04-1.6-4.04-1.6-.54-1.4-1.32-1.8-1.32-1.8-1.08-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.06 1.82 2.78 1.3 3.46.98.1-.78.42-1.3.76-1.6-2.66-.3-5.46-1.34-5.46-5.96 0-1.32.46-2.4 1.22-3.26-.12-.3-.54-1.52.12-3.18 0 0 1-.32 3.3 1.24a11.5 11.5 0 0 1 6 0c2.3-1.56 3.3-1.24 3.3-1.24.66 1.66.24 2.88.12 3.18.76.86 1.22 1.94 1.22 3.26 0 4.64-2.8 5.66-5.48 5.96.42.36.8 1.06.8 2.14v3.18c0 .34.2.74.82.62A12.01 12.01 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section id="about" class="section container">
+        <div class="about-header">
+          <h3 class="section-title">About Me</h3>
+          <p class="about-kicker">Relentless problem solver • Builder • Lifelong learner</p>
+        </div>
+        <div class="about-grid">
+          <aside class="profile-card glass">
+            <div class="profile-top">
+              <div class="ring-sm">
+                <img src="public/avatar.jpg" alt="Siddhartha Tikaigari" />
+              </div>
+              <div>
+                <h4 class="profile-name">Siddhartha Tikaigari</h4>
+                <p class="profile-role">Blockchain Enthusiast • Full‑Stack Developer</p>
+                <p class="availability"><span class="dot"></span> Available for opportunities</p>
+              </div>
+            </div>
+            <div class="quick-facts">
+              <div class="fact"><span>Started Coding</span><strong>2021</strong></div>
+              <div class="fact"><span>Based in</span><strong>Hyderabad</strong></div>
+              <div class="fact"><span>Favorite Stack</span><strong>TypeScript • React • Node</strong></div>
+              <div class="fact"><span>Current Focus</span><strong>Web3 & Systems</strong></div>
+            </div>
+            <div class="pill-group">
+              <span class="pill">React</span>
+              <span class="pill">Next.js</span>
+              <span class="pill">Node.js</span>
+              <span class="pill">Tailwind</span>
+              <span class="pill">Solidity</span>
+              <span class="pill">PostgreSQL</span>
+              <span class="pill">Git & GitHub</span>
+              <span class="pill">Problem Solving</span>
+            </div>
+          </aside>
+
+          <article class="about-copy">
+            <p>
+              I'm <strong>Siddhartha</strong> — I design and ship reliable software with a calm
+              mindset and a bias for action. I enjoy turning sharp ideas into
+              elegant systems that are fast, accessible, and maintainable.
+            </p>
+            <div class="callouts">
+              <div class="bar-callout">
+                <p><strong>While others scroll, I build.</strong></p>
+                <p><strong>While most read the questions, I ship the answers.</strong></p>
+              </div>
+            </div>
+            <p>
+              Across projects and hackathons, I've learned to balance speed
+              with precision — owning the problem end‑to‑end, writing tests,
+              and sweating the details that create real user delight.
+            </p>
+            <p>
+              Lately, I'm exploring <strong>Web3</strong>, <strong>distributed systems</strong>,
+              and <strong>developer experience</strong> — building tools and products that
+              make complex things feel simple.
+            </p>
+            <blockquote class="quote-block glass">
+              <div class="icon-wrap" aria-hidden="true">💡</div>
+              <p>
+                "Knowledge shouldn't just be gained — it should be built upon,
+                tested, and transformed into impact."
+              </p>
+            </blockquote>
+            <p class="about-links">
+              <a class="btn" href="#projects">See Projects</a>
+              <a class="btn ghost" href="#contact">Get in Touch</a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="academic" class="section container">
+        <div class="about-header">
+          <h3 class="section-title">Academic Journey</h3>
+          <p class="about-kicker">From school excellence to engineering mastery</p>
+        </div>
+        <p class="timeline-sub">Milestones with performance metrics</p>
+
+        <div class="timeline">
+          <div class="timeline-line"></div>
+
+          <div class="milestone left">
+            <div class="card glass">
+              <div class="card-head">
+                <div class="badge icon">🎓</div>
+                <h4>10th SSC Board <span class="ok">✓</span></h4>
+              </div>
+              <p>Successfully cleared secondary education with excellent academic performance</p>
+              <div class="stats">
+                <div class="stat"><span>Score</span><strong>95.0%</strong></div>
+                <div class="stat"><span>Rank</span><strong>—</strong></div>
+                <div class="stat"><span>Grade</span><strong>A+</strong></div>
+                <div class="stat"><span>Year</span><strong>2022</strong></div>
+              </div>
+              <div class="pill-row">
+                <span class="pill">Mathematics</span>
+                <span class="pill">Science</span>
+                <span class="pill">English</span>
+                <span class="pill">Social Studies</span>
+              </div>
+            </div>
+            <div class="year-float glass">
+              <div class="year">2022</div>
+              <div class="mini">Achievement Unlocked • 95.0%</div>
+            </div>
+          </div>
+
+          <div class="milestone right">
+            <div class="card glass">
+              <div class="card-head">
+                <div class="badge icon">⭐</div>
+                <h4>12th HSC Board <span class="ok">✓</span></h4>
+              </div>
+              <p>Completed higher secondary with focus on Science stream (PCM)</p>
+              <div class="stats">
+                <div class="stat"><span>Score</span><strong>97.0%</strong></div>
+                <div class="stat"><span>Rank</span><strong>—</strong></div>
+                <div class="stat"><span>Grade</span><strong>A+</strong></div>
+                <div class="stat"><span>Year</span><strong>2022–2024</strong></div>
+              </div>
+              <div class="pill-row">
+                <span class="pill">Physics</span>
+                <span class="pill">Chemistry</span>
+                <span class="pill">Mathematics</span>
+              </div>
+            </div>
+            <div class="year-float glass">
+              <div class="year">2022–2024</div>
+              <div class="mini">Achievement Unlocked • 97.0%</div>
+            </div>
+          </div>
+
+          <div class="milestone left">
+            <div class="card glass">
+              <div class="card-head">
+                <div class="badge icon">🏅</div>
+                <h4>JEE Mains <span class="ok">✓</span></h4>
+              </div>
+              <p>Qualified with a strong percentile in the national entrance exam</p>
+              <div class="stats">
+                <div class="stat"><span>Score</span><strong>95.89%<br/>Percentile</strong></div>
+                <div class="stat"><span>Rank</span><strong>—</strong></div>
+                <div class="stat"><span>Grade</span><strong>Qualified</strong></div>
+                <div class="stat"><span>Year</span><strong>2024</strong></div>
+              </div>
+              <div class="pill-row">
+                <span class="pill">Physics</span>
+                <span class="pill">Chemistry</span>
+                <span class="pill">Mathematics</span>
+              </div>
+            </div>
+            <div class="year-float glass">
+              <div class="year">2024</div>
+              <div class="mini">Achievement Unlocked • 95.89 Percentile</div>
+            </div>
+          </div>
+
+          
+        </div>
+      </section>
+
+      <section id="projects" class="section container">
+        <h3 class="section-title">Projects</h3>
+        <p>Feature your best work.</p>
+      </section>
+
+      <section id="skills" class="section container">
+        <h3 class="section-title">Skills</h3>
+        <p>Core skills and tools.</p>
+      </section>
+
+      <section id="contact" class="section container">
+        <h3 class="section-title">Contact</h3>
+        <p>How people can reach you.</p>
+      </section>
+
+      <section id="resume" class="section container">
+        <h3 class="section-title">Resume</h3>
+        <div class="glass" style="padding: 0;">
+          <iframe
+            class="resume-frame"
+            src="public/Resume.pdf"
+            title="Resume - Siddhartha Tikaigari"
+          ></iframe>
+        </div>
+        <div class="cta-row">
+          <a class="btn" href="public/Resume.pdf" download>Download PDF</a>
+          <a class="btn ghost" href="public/Resume.pdf" target="_blank" rel="noopener">Open in New Tab</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+  </html>
